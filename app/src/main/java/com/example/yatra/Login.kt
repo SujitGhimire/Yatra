@@ -8,37 +8,49 @@ import android.view.View
 import android.widget.Toast
 import com.example.yatra.databinding.ActivityLoginBinding
 import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
+import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
 class Login : AppCompatActivity() {
+    private lateinit var googleSignInClient: GoogleSignInClient
+    private lateinit var firebaseAuth: FirebaseAuth
+    private lateinit var binding: ActivityLoginBinding
     companion object{
         private const val RC_SIGN_IN=120
-    }
-    private lateinit var googleSignInClients:GoogleSignInClient
-    private lateinit var binding: ActivityLoginBinding
-    private lateinit var mAuth:FirebaseAuth
-    private lateinit var googleSignInClient: GoogleSignInClient
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        binding= ActivityLoginBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-        //configure google sign in
-        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-            .requestIdToken(getString(R.string.client_id))
-            .requestEmail()
-            .build()
-        googleSignInClients = GoogleSignIn.getClient(this, gso)
+        private const val TAG="GOOGLE_SIGN_IN_TAG"
     }
 
-    fun signIn(view: View) {
-        val signInIntent = googleSignInClients.signInIntent
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = ActivityLoginBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        val googleSignInOptions=GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_GAMES_SIGN_IN)
+            .requestIdToken(getString(com.firebase.ui.auth.R.string.default_web_client_id))
+            .requestEmail()
+            .build()
+        googleSignInClient=GoogleSignIn.getClient(this,googleSignInOptions)
+        firebaseAuth= FirebaseAuth.getInstance()
+        binding.signInGoogle.setOnClickListener{
+            Toast.makeText(this,"Hello here",Toast.LENGTH_SHORT).show()
+            signIn()
+
+        }
+    }
+    private fun signIn() {
+        val signInIntent = googleSignInClient.signInIntent
         startActivityForResult(signInIntent, RC_SIGN_IN)
     }
+
+
+
+
+
 
 }
