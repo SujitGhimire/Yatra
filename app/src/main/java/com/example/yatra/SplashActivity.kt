@@ -26,7 +26,7 @@ class SplashActivity : AppCompatActivity() {
         binding.textView2.startAnimation(bounce)
         Handler(Looper.getMainLooper()).postDelayed({
             if(user==null){
-                var logIntent= Intent(this@SplashActivity,Login::class.java)
+                var logIntent= Intent(this@SplashActivity,LoginActivity::class.java)
                 startActivity(logIntent)
                 finish()
             }else{

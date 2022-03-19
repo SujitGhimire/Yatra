@@ -4,11 +4,17 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Sujit/AndroidStudioProjects/Class/app/src/main/res/drawable/button_shape.xml" value="0.305" />
+        <entry key="..\:/Users/Sujit/AndroidStudioProjects/Class/app/src/main/res/drawable/code_background.xml" value="0.305" />
+        <entry key="..\:/Users/Sujit/AndroidStudioProjects/Class/app/src/main/res/drawable/next_button.xml" value="0.305" />
+        <entry key="..\:/Users/Sujit/AndroidStudioProjects/Class/app/src/main/res/drawable/phone.xml" value="0.305" />
         <entry key="..\:/Users/Sujit/AndroidStudioProjects/Class/app/src/main/res/drawable/splash_background.xml" value="0.1455" />
         <entry key="..\:/Users/Sujit/AndroidStudioProjects/Class/app/src/main/res/layout/activity_dashboard.xml" value="0.35208333333333336" />
-        <entry key="..\:/Users/Sujit/AndroidStudioProjects/Class/app/src/main/res/layout/activity_login.xml" value="0.13513513513513514" />
+        <entry key="..\:/Users/Sujit/AndroidStudioProjects/Class/app/src/main/res/layout/activity_login.xml" value="0.35208333333333336" />
         <entry key="..\:/Users/Sujit/AndroidStudioProjects/Class/app/src/main/res/layout/activity_main.xml" value="0.24635416666666668" />
+        <entry key="..\:/Users/Sujit/AndroidStudioProjects/Class/app/src/main/res/layout/activity_otp_code.xml" value="0.35208333333333336" />
+        <entry key="..\:/Users/Sujit/AndroidStudioProjects/Class/app/src/main/res/layout/activity_send_otp.xml" value="0.35208333333333336" />
         <entry key="..\:/Users/Sujit/AndroidStudioProjects/Class/app/src/main/res/layout/activity_splash.xml" value="0.18324607329842932" />
+        <entry key="..\:/Users/Sujit/AndroidStudioProjects/Class/app/src/main/res/layout/activity_verify_otp.xml" value="0.35208333333333336" />
       </map>
     </option>
   </component>
