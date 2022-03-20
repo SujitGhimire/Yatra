@@ -59,63 +59,33 @@
             android:layout_marginEnd="20dp"
             android:layout_gravity="center"
             android:layout_marginTop="20dp">
-
-            <com.chaos.view.PinView
-                android:id="@+id/pinView"
-                style="@style/PinWidget.PinView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:cursorVisible="true"
-                android:inputType="number"
-                android:textSize="20sp"
-                android:textStyle="normal"
-                app:itemCount="6"
-                app:lineColor="#ff00ffff" />
+        <com.mukesh.OtpView
+            android:id="@+id/otp_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:itemBackground="@drawable/code_background"
+            app:OtpItemCount="6"/>
 
         </LinearLayout>
-        <LinearLayout
+        <TextView
+            android:layout_marginTop="200dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="50dp"
-            android:gravity="center"
-            android:layout_marginEnd="20dp"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="16sp"
-                android:text="Didn't get the code?"/>
-
-            <TextView
-                android:id="@+id/send_txt"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginStart="5dp"
-                android:text="Send it again"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-        </LinearLayout>
-        <FrameLayout
+            android:layout_marginStart="10dp"
+            android:fontFamily="casual"
+            android:layout_marginEnd="10dp"
+            android:text="You're agreeing to Terms and Conditions and Privacy"
+            android:textSize="16sp"/>
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <Button
-                android:id="@+id/verify_button"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="150dp"
-                android:background="@drawable/next_button"
-                android:padding="20dp"
-                android:text="Next"
-                android:textSize="22sp"
-                android:textStyle="bold" />
-            <ProgressBar
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_gravity="center"
-                android:visibility="gone"/>
-        </FrameLayout>
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:fontFamily="casual"
+            android:layout_marginEnd="10dp"
+            android:text="Policy of YATRA"
+            android:gravity="center"
+            android:textSize="16sp"/>
 
 
 
